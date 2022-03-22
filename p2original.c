@@ -9,12 +9,14 @@ void input_line(float*x1,float*y1,float*x2,float*y2,float*x3,float*y3)
  printf("ente the third coordinates:\n");
  scanf("%f%f",x3,y3);
 }
+
 int lengthofsides (float x1, float y1, float x2, float y2)
 {
 int area;
 area=sqrt((x2-x1)*(x2-x1)-(y2-y1))*(y2-y1);
 return area;
 }
+
 int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3)
 {
   float a,b,c;
