@@ -1,10 +1,10 @@
 #include<stdio.h>
 int input()
 {
-  int n;
+  int x;
   printf("enter value:\n");
-  scanf("%d",&n);
-  return n;
+  scanf("%d",&x);
+  return x;
 }
 int find_fibo(int n)
 {
