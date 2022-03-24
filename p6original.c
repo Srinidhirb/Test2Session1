@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void input_string(char *a)
+void input_string(char *x)
 {
   printf("Enter the string:\n");
-  scanf("%s", a);
+  scanf("%s", x);
 }
 int string_length(char *str)
 {
