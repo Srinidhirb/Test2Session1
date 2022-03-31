@@ -1,0 +1,32 @@
+Breakpoint 1, main () at p7original.c:28
+28  int main(){
+(gdb) n
+30      l=input_line();
+(gdb) s
+input_line () at p7original.c:18
+18          l.p1=input_point();
+(gdb) n
+Enter the co-ordinates of the points
+2 4 
+19          l.p2=input_point();
+(gdb) n
+Enter the co-ordinates of the points
+4 2 
+20          return l;
+(gdb) n
+21  }
+(gdb) n
+main () at p7original.c:31
+31      find_lenght(&l);
+(gdb) s
+find_lenght (l=0x7ffe47189e60) at p7original.c:23
+23      l->distance=sqrt(((l->p1.x - l->p2.x)*(l->p1.x - l->p2.x))+((l->p1.y - l->p2.y)*(l->p1.y - l->p2.y)));
+(gdb) n
+24  }
+(gdb) n
+main () at p7original.c:32
+32      output(&l);
+(gdb) n
+33      return 0;
+(gdb) n
+34  }(

@@ -1,33 +1,39 @@
 #include<stdio.h>
+#include<math.h>
 int input_array_size()
 {
-  int x;
+  int n;
   printf("enter the array size:\n");
-  scanf("%d",&x);
-  return x;
+  scanf("%d",&n);
+  return n;
 }
-void init_array(int n, int a[n]
+void erotosthenes_sieve (int n, int a[n])
 {
-  for(int i=0;i<n;i++)
-    a[i]= i;
-  a[1]=0;
-}
-void erotosthenes_sieve(int n, int a[n])
-{
-  int i=0;
-  while(i< sqrt(n))
-    {
-      while(a[i]==0)i++;
-      for(int k=i+i;i<n;k+=i)
-        a[k]=0;
-      i++
+  for(int i=2;i<=sqrt(n);i++)
+  if(a[i]==0)
+  {
+    for(int j=i*i;j<=n;j+=i)
+      {
+        a[j]=1;
+      }
     }
 }
-void out_put(int n, int a[n])
+void output(int n, int a[n])
 {
-  printf("the %d erotosthenes sieve is %d",n,a[n]);
-}
+  for(int i=2;i<=n;i++)
+    {
+      if(a[i]==0)
+      {
+        printf("%d",i);
+      }
+    }
+  }
 int main()
 {
-  int 
+  int n;
+  n=input_array_size();
+  int a[100]={0};
+  erotosthenes_sieve(n,a);
+  output(n,a);
+  return 0;
 }

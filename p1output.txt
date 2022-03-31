@@ -1,1 +1,29 @@
-
+Breakpoint 1, main () at p1original.c:17
+17  {
+(gdb) n
+19    input(&a,&b,&c,&d);
+(gdb) s
+input (x1=0x7ffcebb26874, y1=0x7ffcebb26878, x2=0x7ffcebb2687c, 
+    y2=0x7ffcebb26880) at p1original.c:5
+5     printf("enter the points (x1,y1) and (x2,y2)\n");
+(gdb) n
+enter the points (x1,y1) and (x2,y2)
+6     scanf("%f%f%f%f",x1,y1,x2,y2);
+(gdb) n
+1 3 2 4 
+7   }
+(gdb) n
+main () at p1original.c:20
+20    find_distance(a,b,c,d,&e);
+(gdb) s
+find_distance (x1=1, y1=3, x2=2, y2=4, area=0x7ffcebb26884) at p1original.c:10
+10    *area=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+(gdb) n
+11  }
+(gdb) n
+main () at p1original.c:21
+21    output(a,b,c,d,e);
+(gdb) n
+22    return 0;
+(gdb) n
+23  }(

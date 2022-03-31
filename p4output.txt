@@ -1,1 +1,59 @@
 
+Breakpoint 1, main () at p4original.c:27
+27    a=input();
+(gdb) s
+input () at p4original.c:3
+3   {
+(gdb) n
+5     printf("enter value:\n");
+(gdb) n
+enter value:
+6     scanf("%d",&x);
+(gdb) n
+5
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p4original.c:28
+28    b=find_fibo(a);
+(gdb) s
+find_fibo (n=5) at p4original.c:11
+11   int a=0,b=1,c;
+(gdb) n
+12    for(int i=2;i<=n-1;i++)
+(gdb) n
+14      c=a+b;
+(gdb) n
+15      a=b;
+(gdb) n
+16      b=c;
+(gdb) n
+12    for(int i=2;i<=n-1;i++)
+(gdb) n
+14      c=a+b;
+(gdb) n
+15      a=b;
+(gdb) n
+16      b=c;
+(gdb) n
+12    for(int i=2;i<=n-1;i++)
+(gdb) n
+14      c=a+b;
+(gdb) n
+15      a=b;
+(gdb) n
+16      b=c;
+(gdb) n
+12    for(int i=2;i<=n-1;i++)
+(gdb) n
+18    return c;
+(gdb) n
+19  }
+(gdb) n
+main () at p4original.c:29
+29    output(a,b);
+(gdb) n
+30    return 0;
+(gdb) n
+31  }

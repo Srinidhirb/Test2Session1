@@ -1,1 +1,72 @@
 
+Breakpoint 1, main () at p6original.c:41
+41  {
+(gdb) n
+43    input_string(str);
+(gdb) n
+Enter the string:
+heloo
+45    string_copy(rev_str,str);
+(gdb) s
+string_copy (d=0x7ffd975578d0 "", s=0x7ffd97557860 "heloo") at p6original.c:17
+17    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+18      d[i]=s[i];
+(gdb) n
+17    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+18      d[i]=s[i];
+(gdb) n
+17    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+18      d[i]=s[i];
+(gdb) n
+17    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+18      d[i]=s[i];
+(gdb) n
+17    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+18      d[i]=s[i];
+(gdb) n
+17    for(int i=0;s[i]!='\0';i++)
+(gdb) n
+19  }
+(gdb) n
+main () at p6original.c:46
+46    str_reverse(rev_str);
+(gdb) s
+str_reverse (str=0x7ffd975578d0 "heloo") at p6original.c:24
+24    n = string_length(str);
+(gdb) n
+25    n--;
+(gdb) n
+26    for (int i = 0; i< n/2; i++)
+(gdb) n
+28       t= str[i];
+(gdb) n
+29       str[i] = str[n-i];
+(gdb) n
+30       str[n-i] = t;
+(gdb) n
+26    for (int i = 0; i< n/2; i++)
+(gdb) n
+28       t= str[i];
+(gdb) n
+29       str[i] = str[n-i];
+(gdb) n
+30       str[n-i] = t;
+(gdb) n
+26    for (int i = 0; i< n/2; i++)
+(gdb) n
+32    return str;
+(gdb) n
+33  }
+(gdb) n
+main () at p6original.c:47
+47    output(str, rev_str);
+(gdb) n
+The reverse of heloo is ooleh
+48    return 0;
+(gdb) n
+49  }(
