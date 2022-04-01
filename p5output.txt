@@ -1,1 +1,34 @@
-
+Breakpoint 1, main () at p5original.c:32
+32  {
+(gdb) n
+34    n=input_array_size();
+(gdb) s
+input_array_size () at p5original.c:4
+4   {
+(gdb) n
+6     printf("enter the array size:\n");
+(gdb) n
+enter the array size:
+7     scanf("%d",&n);
+(gdb) n
+3 
+8     return n;
+(gdb) n
+9   }
+(gdb) n
+main () at p5original.c:35
+35    int a[100]={0};
+(gdb) n
+36    erotosthenes_sieve(n,a);
+(gdb) s
+erotosthenes_sieve (n=3, a=0x7fff32986770) at p5original.c:12
+12    for(int i=2;i<=sqrt(n);i++)
+(gdb) n
+20  }
+(gdb) n
+main () at p5original.c:37
+37    output(n,a);
+(gdb) n
+38    return 0;
+(gdb) n
+39  }(
