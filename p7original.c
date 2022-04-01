@@ -7,7 +7,8 @@ typedef struct line{
     point p1,p2;
     float distance;
 }line;
-point input_point(){
+point input_point(){ 
+  
     point z;
     printf("Enter the co-ordinates of the points\n");
     scanf("%f %f",&z.x,&z.y);
